@@ -390,7 +390,7 @@ section {
     gap: 10px;
 }
 
-.project-link {
+.project-link, .download-link {
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
@@ -398,10 +398,13 @@ section {
     transition: var(--transition);
 }
 
-.project-link:hover {
+.project-link:hover, .download-link:hover {
     color: var(--primary);
 }
 
+.download-link{
+    margin-left: 40%;
+}
 
 /* Kontak */
 #kontak {
@@ -536,25 +539,25 @@ footer {
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 30px;
+        gap: 25px;
         justify-content: center;
         align-items: center;
     }
 
     #beranda {
-        padding-top: 120px; /* supaya tidak ketimpa navbar */
-        min-height: 100vh;
+        padding-top: 270px;
+        height: 110vh;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .hero-content h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .hero-content {
-        max-width: 90%;
+        max-width: 95%;
         margin: 0 auto;
     }
     
@@ -563,13 +566,18 @@ footer {
         justify-content: center;
         align-items: center;
         width: 100%;
+        /* margin-top: 30%; */
     }
     
     .profile-img {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 50%;
         margin: 0 auto;
-    }
+        border: 6px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
     
     .experience-item, .experience-item:nth-child(even) {
         flex-direction: column;
@@ -582,7 +590,6 @@ footer {
     
     .contact-info {
         grid-template-columns: 1fr;
-        /* justify-items: center; */
         width: 100%;
     }
 
@@ -598,6 +605,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #beranda {
+        padding-top: 270px;
+        padding-bottom: 5px;
+        height: 115vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
     .navbar {
         padding: 15px 0;
     }
@@ -634,8 +658,9 @@ footer {
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        gap: 5px;
     }
 
     .hero-content {
@@ -649,14 +674,25 @@ footer {
     }
     
     .hero-content h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 25px;
     }
     
     .profile-img {
-        width: 230px;
-        height: 230px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(255, 255, 255, 0.25);
     }
-    
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }    
     .experience-img {
         width: 200px;
         height: 150px;
@@ -673,10 +709,11 @@ footer {
     }
 
     .contact-info {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
         gap: 20px;
         width: 100%;
         max-width: 500px;
+        margin: auto;
     }
 
     .contact-item {
@@ -685,22 +722,37 @@ footer {
 }
 
 @media (max-width: 576px) {
+    #beranda {
+        height: auto;
+    }
+
+    .hero-container {
+        gap: 2px;
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+          
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(255, 255, 255, 0.25);
     }
     
     .section-title h2 {
         font-size: 2rem;
     }
     
-    /* .contact-info {
-        grid-template-columns: 1fr;
-    } */
+    .btn {
+        padding: 9px 22px;
+        font-size: 0.9rem;
+    }
+
 
     .contact-item {
         width: 100%;
