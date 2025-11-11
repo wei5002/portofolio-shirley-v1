@@ -545,8 +545,8 @@ footer {
     }
 
     #beranda {
-        padding-top: 270px;
-        height: 110vh;
+        padding-top: 240px;
+        height: 125vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -628,9 +628,9 @@ footer {
     
     .nav-links {
         position: fixed;
-        top: 70px;
+        top: 68px;
         right: -100%;
-        width: 80%;
+        width: 45%;
         height: calc(100vh - 70px);
         background-color: var(--primary);
         flex-direction: column;
